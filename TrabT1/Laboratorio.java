@@ -14,4 +14,5 @@ class Laboratorio{
 	this.endereco = "Rua Pernambuco 202 E";
 	this.telefone = "4933020932";
   }
+
 }
