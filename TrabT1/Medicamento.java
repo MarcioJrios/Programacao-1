@@ -6,20 +6,18 @@ class Medicamento{
   boolean receitaObrigatoria;
   int qtdEstoque;
 
-  Medicamento(Laboratorio lab){
+  Medicamento(Laboratorio lab, Data data){
 	this.nome = "Dorflex";
 	this.precoVenda = 10;
-	this.dataValidade.dia = 22;
-	this.dataValidade.mes = 3;
-	this.dataValidade.ano = 2020;
+	this.dataValidade = data;
 	this.laboratorio = lab;
-	this.receitaObrigatoria = false;
+	this.receitaObrigatoria = true;
 	this.qtdEstoque = 12;
   }
 
   void reajustarPrecoVenda(double percentual){
 	percentual = percentual / 100;
-	this.precoVenda = this.precoVenda * percentual;
+	this.precoVenda = this.precoVenda + (this.precoVenda * percentual);
 	
   }
 
@@ -35,5 +33,13 @@ class Medicamento{
   }
 
   void mostra(){
+	System.out.println("Nome do produto: "+this.nome);
+	System.out.println("Preço: "+this.precoVenda);
+	System.out.println("Nome do Laboratorio: "+this.laboratorio.nomeFantasia);
+	System.out.println("Receira Obrigatoria: "+this.receitaObrigatoria);
+	System.out.println("Quantidade no Estoque: "+this.qtdEstoque);
+	String data = ""+this.dataValidade.dia+"/"+this.dataValidade.mes+"/"+this.dataValidade.ano;
+	System.out.println("Data de validade: "+data+"\n");
   }
+
 }
