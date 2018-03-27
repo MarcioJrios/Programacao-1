@@ -15,9 +15,9 @@ public class Bodega{
 		produtos.add(new Bebida("Velho Barreiro", 9.90, "40%", 750, 5));
 		produtos.add(new Bebida("Skol Beats LongNeck", 4.99, "7,6%", 355, 24));
 		Bebida refb = new Bebida();
-		fregueses.add(new Cliente("Matheus", "42282434870", true));
-		fregueses.add(new Cliente("Isabeli", "54433121239", true));
-		fregueses.add(new Cliente("Philipe", "30349194901", false));
+		fregueses.add(new Cliente("Marcio", "10456409245", true));
+		fregueses.add(new Cliente("Kirito", "52420742272", false));
+		fregueses.add(new Cliente("Karling", "02729528571", true));
 		Cliente refc = new Cliente();
 
 		int x;
